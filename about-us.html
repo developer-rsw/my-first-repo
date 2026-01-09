@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About us</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+
+<body>
+  <header class="header-section">
+    <div class="header-top">
+      <p class="offer-tag-line">
+        <strong> Limited time offer:</strong> 0% Transaction fees on all gold
+        bar purchases <strong> until Dec 31st!</strong>
+      </p>
+      <div class="offer-close-btn">
+        <button class="close-btn" onclick="closeOffer()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+    </div>
+    <div class="main-header-part">
+      <div class="info-bar-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="info-bar">
+                <!-- Contact Info -->
+                <div class="info-group">
+                  <div class="info-item">
+                    <i class="bi bi-telephone"></i>
+                    <span>+49 (0) 431 12345-0</span>
+                  </div>
+                  <div class="info-item">
+                    <i class="bi bi-clock"></i>
+                    <span>Mon-Fri 9.00-18.00 & Sat 9.00-13.00</span>
+                  </div>
+                  <div class="info-item">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Beselerallee 70, 24105 Kiel</span>
+                  </div>
+                </div>
+
+                <!-- Gold & Silver Prices -->
+                <div class="price-group">
+                  <div class="price-item">
+                    <span class="name">Gold</span>
+                    <span class="price-number">€1,892.45</span>
+                    <div class="change">
+                      <i class="bi bi-caret-up-fill"></i>
+                      <span class="up">17%</span>
+                    </div>
+                  </div>
+                  <div class="price-item">
+                    <span class="name">Silver</span>
+                    <span class="price-number">€23.67</span>
+                    <div class="change">
+                      <i class="bi bi-caret-up-fill"></i>
+                      <span class="up">17%</span>
+                    </div>
+                  </div>
+
+                  <!-- Language Switch -->
+                  <div class="language-switch">
+                    <button id="deBtn" class="active">DE</button>
+                    <button id="enBtn">EN</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="logo-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="logo-part-navbar">
+                <div class="logo">
+                  <img src="./images/main-logo.svg" alt="logo" width="155" height="105" loading="lazy"
+                    class="img-fluid" />
+                  <div class="search-bar">
+                    <input type="text" placeholder="Search" />
+                    <button><i class="bi bi-search"></i></button>
+                  </div>
+                </div>
+
+                <div class="icons">
+                  <div class="icon">
+                    <a href="#"><i class="bi bi-person"></i></a>
+                  </div>
+                  <div class="icon">
+                    <a href="#"><i class="bi bi-heart"></i></a>
+                  </div>
+                  <div class="icon">
+                    <a href="#"><i class="bi bi-cart"></i></a>
+                    <span class="cart-badge">2</span>
+                  </div>
+                  <div class="icon">
+                    <i id="menuIcon" class="bi bi-list menu-icon" onclick="toggleMenu()"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="nav-container">
+                <!-- Mobile Menu Icon -->
+
+                <ul class="nav-links" id="navLinks">
+                  <!-- Buy Menu -->
+                  <li>
+                    <div class="menu-title">
+                      <a href="#" active>Buy</a>
+                      <i class="bi bi-chevron-down arrow" onclick="toggleDropdown(this)"></i>
+                    </div>
+                    <ul class="dropdown-menu-header">
+                      <li><a href="#">Gold</a></li>
+                      <li><a href="#">Silver</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Sell Menu -->
+                  <li>
+                    <div class="menu-title">
+                      <a href="#" class="active">Sell</a>
+                      <i class="bi bi-chevron-down arrow" onclick="toggleDropdown(this)"></i>
+                    </div>
+                    <ul class="dropdown-menu-header">
+                      <li class="group-heading">Gold</li>
+                      <li><a href="#">Gold coins</a></li>
+                      <li class="active"><a href="#">Gold bars</a></li>
+
+                      <li class="group-heading">Silver</li>
+                      <li><a href="#">Silver coins</a></li>
+                      <li><a href="#">Silver bars</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a href="#">Jewellery</a></li>
+                  <li><a href="#">Collector coins</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="fixed-header-part">
+      <div class="inner-header-part">
+        <div class="logo-part-navbar-fixed">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="fixed-on-scroll">
+                  <div class="logo-part">
+                    <img src="./images/main-logo.svg" alt="logo" width="155" height="105" loading="lazy"
+                      class="img-fluid" />
+                  </div>
+                  <div class="fixed-header-content">
+                    <div class="info-bar-section">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-12 px-0">
+                            <div class="info-bar">
+                              <!-- Contact Info -->
+                              <div class="info-group">
+                                <div class="info-item">
+                                  <i class="bi bi-telephone"></i>
+                                  <span>+49 (0) 431 12345-0</span>
+                                </div>
+                                <div class="info-item">
+                                  <i class="bi bi-clock"></i>
+                                  <span>Mon-Fri 9.00-18.00 & Sat 9.00-13.00</span>
+                                </div>
+                                <div class="info-item">
+                                  <i class="bi bi-geo-alt"></i>
+                                  <span>Beselerallee 70, 24105 Kiel</span>
+                                </div>
+                              </div>
+
+                              <!-- Gold & Silver Prices -->
+                              <div class="price-group">
+                                <div class="price-item">
+                                  <span class="name">Gold</span>
+                                  <span class="price-number">€1,892.45</span>
+                                  <div class="change">
+                                    <i class="bi bi-caret-up-fill"></i>
+                                    <span class="up">17%</span>
+                                  </div>
+                                </div>
+                                <div class="price-item">
+                                  <span class="name">Silver</span>
+                                  <span class="price-number">€23.67</span>
+                                  <div class="change">
+                                    <i class="bi bi-caret-up-fill"></i>
+                                    <span class="up">17%</span>
+                                  </div>
+                                </div>
+
+                                <!-- Language Switch -->
+                                <div class="language-switch">
+                                  <button id="deBtn" class="active">
+                                    DE
+                                  </button>
+                                  <button id="enBtn">EN</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <nav>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-12 px-0 navbar-header-fixed-part">
+                            <div class="nav-container">
+                              <!-- Mobile Menu Icon -->
+                              <i id="menuIconfix" class="bi bi-list menu-icon" onclick="togglefixMenu()"></i>
+
+                              <ul class="nav-links" id="navlinksfix">
+                                <!-- Buy Menu -->
+                                <li>
+                                  <div class="menu-title">
+                                    <a href="#" active>Buy</a>
+                                    <i class="bi bi-chevron-down arrow" onclick="toggleFixDropdown(this)"></i>
+                                  </div>
+                                  <ul class="dropdown-menu-header">
+                                    <li><a href="#">Gold</a></li>
+                                    <li><a href="#">Silver</a></li>
+                                  </ul>
+                                </li>
+
+                                <!-- Sell Menu -->
+                                <li>
+                                  <div class="menu-title">
+                                    <a href="#" class="active">Sell</a>
+                                    <i class="bi bi-chevron-down arrow" onclick="toggleFixDropdown(this)"></i>
+                                  </div>
+                                  <ul class="dropdown-menu-header">
+                                    <li class="group-heading">Gold</li>
+                                    <li><a href="#">Gold coins</a></li>
+                                    <li class="active">
+                                      <a href="#">Gold bars</a>
+                                    </li>
+
+                                    <li class="group-heading">Silver</li>
+                                    <li><a href="#">Silver coins</a></li>
+                                    <li><a href="#">Silver bars</a></li>
+                                  </ul>
+                                </li>
+
+                                <li><a href="#">Jewellery</a></li>
+                                <li><a href="#">Collector coins</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact us</a></li>
+                              </ul>
+                              <div class="icons">
+                                <div class="icon">
+                                  <a href="#"><i class="bi bi-person"></i></a>
+                                </div>
+                                <div class="icon">
+                                  <a href="#"><i class="bi bi-heart"></i></a>
+                                </div>
+                                <div class="icon">
+                                  <a href="#"><i class="bi bi-cart"></i></a>
+                                  <span class="cart-badge">2</span>
+                                </div>
+                                <div class="icon">
+                                  <a href="javascript:void(0)" onclick="toggleSearchBar()"><i
+                                      class="bi bi-search"></i></a>
+                                </div>
+                              </div>
+                              <!-- Search Bar -->
+                              <div class="toggle-search-bar-part" id="searchBar">
+                                <div class="search-bar">
+                                  <input type="text" placeholder="Search" />
+                                  <button>
+                                    <i class="bi bi-search"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="banner-section product-page-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="banner-content-part">
+              <h1 class="page-name">About us</h1>
+              <p class="page-heading-description">
+                Browse items we buy and sell
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="breadcrumb-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="breadcrumb">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li class="active">About us</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="business-with-heart-section">
+      <div class="container">
+        <div class="row mb-4 mb-lg-5">
+          <div class="col-md-8 mx-auto">
+            <h2 class="section-heading text-center">
+              A business with a heart and a history
+            </h2>
+            <p class="content-para">
+              For more than two decades, we’ve been known for honest, fair
+              trade in coins, precious metals, and jewelry. As an
+              owner-operated business, we value trust, personal consultation,
+              and long-term relationships with our clients.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="achivement-box d-flex h-100 flex-column">
+              <div class="image-part">
+                <img src="./images/achievement/25-year.png" class="img-fluid" width="150" height="80" loading="lazy" />
+              </div>
+              <div class="text-part">
+                <p>Over 25 years of experience</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="achivement-box d-flex h-100 flex-column">
+              <div class="image-part">
+                <img src="./images/achievement/pacht.png" class="img-fluid" width="150" height="80" loading="lazy" />
+              </div>
+              <div class="text-part">
+                <p>Based in the heart of Kiel</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="achivement-box d-flex h-100 flex-column">
+              <div class="image-part">
+                <img src="./images/achievement/expert.png" class="img-fluid" width="150" height="80" loading="lazy" />
+              </div>
+              <div class="text-part">
+                <p>Personalized and discreet advice</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="achivement-box d-flex h-100 flex-column">
+              <div class="image-part">
+                <img src="./images/achievement/best-price.png" class="img-fluid" width="150" height="80"
+                  loading="lazy" />
+              </div>
+              <div class="text-part">
+                <p>Fair market-based pricing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="history-part-section section-margin-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="section-heading text-center">Our Roots – Our Values</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="app-timeline-wrapper">
+              <div class="app-timeline">
+                <span class="app-timeline-display-line"></span>
+                <div class="app-timeline-card-wrapper app-timeline-card-align-bottom app-timeline-red-box">
+                  <div class="app-time-line-card">
+                    <div class="timeline-year-box">
+                      <img src="./images/history/1980-icon.svg" alt="logo" width="20" height="20" />
+                      <h3 class="year">1980s</h3>
+                    </div>
+                    <p class="timeline-text">
+                      Started trading at Beselerallee 70, focused solely on
+                      stamps and coins.
+                    </p>
+                  </div>
+                </div>
+                <div class="app-timeline-card-wrapper app-timeline-card-align-top app-timeline-green-box">
+                  <div class="app-time-line-card">
+                    <div class="timeline-year-box">
+                      <img src="./images/history/1990-icon.svg" alt="logo" width="20" height="20" />
+                      <h3 class="year">1990s</h3>
+                    </div>
+                    <p class="timeline-text">
+                      Introduced precious metals trading alongside coins and stamps.
+                    </p>
+                  </div>
+                </div>
+                <div class="app-timeline-card-wrapper app-timeline-card-align-bottom app-timeline-blue-box">
+                  <div class="app-time-line-card">
+                    <div class="timeline-year-box">
+                      <img src="./images/history/1992-icon.svg" alt="logo" width="20" height="20" />
+                      <h3 class="year">1992s</h3>
+                    </div>
+                    <p class="timeline-text">
+                      Became a certified member of the German Coin Dealers’ Association, ensuring fair and professional
+                      transactions.
+                    </p>
+                  </div>
+                </div>
+                <div class="app-timeline-card-wrapper app-timeline-card-align-top app-timeline-yellow-box">
+                 <div class="app-time-line-card">
+                    <div class="timeline-year-box">
+                      <img src="./images/history/1998-icon.svg" alt="logo" width="20" height="20" />
+                      <h3 class="year">1998s</h3>
+                    </div>
+                    <p class="timeline-text">
+                     Expanded into wholesale trading, supplying banks and savings banks with coins and precious metals.
+                    </p>
+                  </div>
+                </div>
+                <div class="app-timeline-card-wrapper app-timeline-card-align-bottom">
+                 <div class="app-time-line-card">
+                    <div class="timeline-year-box">
+                      <img src="./images/history/2000-icon.svg" alt="logo" width="20" height="20" />
+                      <h3 class="year">2000s–Today</h3>
+                    </div>
+                    <p class="timeline-text">
+                     Built strong nationwide dealer connections, allowing us to offer top market prices for purchases.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gold-sliver-investment-section">
+      <div class="container">
+        <div class="row section-margin-bottom">
+          <div class="com-md-12">
+            <h2 class="section-heading">Gold and silver as investments</h2>
+            <p class="content-para">
+              For over 20 years, you have been able to purchase gold and
+              silver as an investment from us. We always have gold bars, gold,
+              and silver coins in stock for you to take home – for discreet
+              and anonymous cash payment (up to €1,999.99). We source our
+              precious metals directly from reputable refineries or in sealed
+              original containers from state mints. This offers you the
+              greatest possible assurance regarding the quality of the bars
+              and coins we sell.
+            </p>
+            <p class="content-para">
+              We also always have gold and silver bars, Krugerrands, and
+              silver bullion coins such as the Vienna Philharmonic in stock
+              for immediate delivery.
+            </p>
+            <p class="content-para">
+              We would be delighted if you would visit us in person to
+              experience our service and expertise for yourself, and we look
+              forward to hearing from you!
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="team-section">
+              <div class="team-photo">
+                <img src="./images/main-team-image.png" alt="Team Group Photo" width="989" height="467" loading="lazy"
+                  class="img-fluid" />
+              </div>
+              <div class="team-owner">
+                <img src="./images/Naomi.png" alt="Owner Photo" width="236" height="333" loading="lazy"
+                  class="img-fluid" />
+                <p>
+                  Naomi Naujoks-Pacht, owner, certified diamond appraiser
+                  Commercial Register Kiel, HRA 6585 KI
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="team-container">
+              <div class="team-member">
+                <img src="./images/Cedric.png" alt="Cedric Leuenhagen" />
+                <p>Cedric Leuenhagen,<br />Managing Director</p>
+              </div>
+
+              <div class="team-member">
+                <img src="./images/Jochen.png" alt="Jochen Prestien" />
+                <p>Jochen Prestien,<br />banker, was formerly head</p>
+              </div>
+
+              <div class="team-member">
+                <img src="./images/Jochen.png" alt="Jochen Prestien" />
+                <p>Jochen Prestien,<br />banker, was formerly head</p>
+              </div>
+
+              <div class="team-member">
+                <img src="./images/Jochen.png" alt="Jochen Prestien" />
+                <p>Jochen Prestien,<br />banker, was formerly head</p>
+              </div>
+
+              <div class="team-member">
+                <img src="./images/Jochen.png" alt="Andreas Pacht" />
+                <p>Andreas Pacht,<br />company founder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="job-opening-section section-margin-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="section-heading">
+              Job opening: Ambitious talents wanted – Grow together in a great
+              team!
+            </h2>
+            <p class="content-para">
+              We're looking for dedicated people who want to grow with us and
+              work in an environment they feel comfortable in. Exciting tasks
+              and a team that supports you every step of the way await you.
+            </p>
+          </div>
+
+          <div class="details-part">
+            <h3 class="heading-part">Your tasks:</h3>
+            <ul class="details-list">
+              <li>
+                You will provide comprehensive advice to our customers on all
+                aspects of buying and selling precious metals, jewelry,
+                capital goods, and diamonds, both for private and commercial
+                clients.
+              </li>
+              <li>
+                You will analyze and evaluate precious metals, jewelry, and
+                diamonds with an expert eye.
+              </li>
+              <li>
+                Your responsibilities will also include independent cash
+                management (cash and debit card payments), including daily
+                closing.
+              </li>
+              <li>
+                You will record and post goods movements and prepare the
+                necessary receipts for our customers.
+              </li>
+            </ul>
+          </div>
+          <div class="details-part">
+            <h3 class="heading-part">What you bring with you:</h3>
+            <ul class="details-list">
+              <li>
+                A completed apprenticeship as a bank clerk or a comparable
+                commercial qualification. Career changers with relevant
+                experience, for example, from sales in upscale retail or the
+                high-price segment, are also welcome.
+              </li>
+              <li>
+                Experience in cash management and knowledge of physical
+                precious metal investments. A customer-focused and
+                sales-oriented attitude, and ideally experience in counter
+                sales, round out your profile.
+              </li>
+              <li>Excellent written and spoken German skills.</li>
+              <li>
+                You are a team player, work independently and in a structured
+                manner, and are characterized by a solution-oriented approach,
+                even in complex situations.
+              </li>
+            </ul>
+          </div>
+          <div class="details-part">
+            <h3 class="heading-part">What we offer:</h3>
+            <ul class="details-list">
+              <li>
+                Above-average pay that recognizes and rewards your
+                performance.
+              </li>
+              <li>
+                The option of a four-day work week, which offers you
+                flexibility and a healthy work-life balance.
+              </li>
+              <li>Flexible working hours for optimal work-life balance.</li>
+              <li>
+                If you are interested in becoming part of a dynamic and
+                growing team and developing yourself in an exciting
+                environment, we look forward to receiving your application!
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row footer-links-row">
+        <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0">
+          <div class="footer-logo-part">
+            <img src="./images/Footer_logo.png" width="140" height="140px" alt="footer logo" loading="lazy" />
+          </div>
+          <div class="contact-info-div">
+            <p>
+              E-mail :
+              <span>
+                <a href="mailto:info@pacht-kiel.de">info@pacht-kiel.de</a></span>
+            </p>
+            <p>
+              Phone :
+              <span>
+                <a href="tel:0431 - 805 81 85">0431 - 805 81 85</a></span>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+          <div class="office-address">
+            <h4 class="footer-link-heading">Head Office</h4>
+            <p>
+              Xilliams Corner Wine © 2017. 1112 A Market St # Ste B22,
+              Charlottesville, CA 45565
+            </p>
+          </div>
+          <div class="office-timing">
+            <h4 class="footer-link-heading">Opening hours</h4>
+            <div class="day">
+              <span>Mon - Fri </span>
+              <span> 9:00 - 18:00</span>
+            </div>
+            <div class="day">
+              <span>Mon - Fri </span>
+              <span> 9:00 - 18:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6 mb-4 mb-sm-0">
+          <h4 class="footer-link-heading">Sitemap</h4>
+          <ul class="pages-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Abouts</a></li>
+            <li><a href="#">imprint</a></li>
+            <li><a href="#">Data protection</a></li>
+            <li><a href="#">Directions</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0">
+          <h4 class="footer-link-heading">Online Shop</h4>
+          <ul class="pages-links">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">registration</a></li>
+            <li><a href="#">Shipping costs</a></li>
+            <li><a href="#">Payment methods</a></li>
+            <li><a href="#">Terms and Conditions Online Shop</a></li>
+            <li><a href="#">Cancellation policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row copyrightrow">
+        <div class="col-md-12 text-center">
+          <p>© 2020 RainstreamTechnologies All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script>
+    // Toggle function to show/hide search bar
+  </script>
+</body>
+
+</html>

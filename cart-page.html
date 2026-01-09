@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cart page</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap-icons.min.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+
+<body>
+  <header class="header-section">
+    <div class="header-top">
+      <p class="offer-tag-line">
+        <strong> Limited time offer:</strong> 0% Transaction fees on all gold
+        bar purchases <strong> until Dec 31st!</strong>
+      </p>
+      <div class="offer-close-btn">
+        <button class="close-btn" onclick="closeOffer()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+    </div>
+    <div class="main-header-part">
+      <div class="info-bar-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="info-bar">
+                <!-- Contact Info -->
+                <div class="info-group">
+                  <div class="info-item">
+                    <i class="bi bi-telephone"></i>
+                    <span>+49 (0) 431 12345-0</span>
+                  </div>
+                  <div class="info-item">
+                    <i class="bi bi-clock"></i>
+                    <span>Mon-Fri 9.00-18.00 & Sat 9.00-13.00</span>
+                  </div>
+                  <div class="info-item">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Beselerallee 70, 24105 Kiel</span>
+                  </div>
+                </div>
+
+                <!-- Gold & Silver Prices -->
+                <div class="price-group">
+                  <div class="price-item">
+                    <span class="name">Gold</span>
+                    <span class="price-number">€1,892.45</span>
+                    <div class="change">
+                      <i class="bi bi-caret-up-fill"></i>
+                      <span class="up">17%</span>
+                    </div>
+                  </div>
+                  <div class="price-item">
+                    <span class="name">Silver</span>
+                    <span class="price-number">€23.67</span>
+                    <div class="change">
+                      <i class="bi bi-caret-up-fill"></i>
+                      <span class="up">17%</span>
+                    </div>
+                  </div>
+
+                  <!-- Language Switch -->
+                  <div class="language-switch">
+                    <button id="deBtn" class="active">DE</button>
+                    <button id="enBtn">EN</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="logo-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="logo-part-navbar">
+                <div class="logo">
+                  <img src="./images/main-logo.svg" alt="logo" width="155" height="105" loading="lazy"
+                    class="img-fluid" />
+                  <div class="search-bar">
+                    <input type="text" placeholder="Search" />
+                    <button><i class="bi bi-search"></i></button>
+                  </div>
+                </div>
+
+                <div class="icons">
+                  <div class="icon">
+                    <a href="#"><i class="bi bi-person"></i></a>
+                  </div>
+                  <div class="icon">
+                    <a href="#"><i class="bi bi-heart"></i></a>
+                  </div>
+                  <div class="icon">
+                    <a href="#"><i class="bi bi-cart"></i></a>
+                    <span class="cart-badge">2</span>
+                  </div>
+                  <div class="icon">
+                    <i id="menuIcon" class="bi bi-list menu-icon" onclick="toggleMenu()"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="nav-container">
+                <!-- Mobile Menu Icon -->
+
+                <ul class="nav-links" id="navLinks">
+                  <!-- Buy Menu -->
+                  <li>
+                    <div class="menu-title">
+                      <a href="#" active>Buy</a>
+                      <i class="bi bi-chevron-down arrow" onclick="toggleDropdown(this)"></i>
+                    </div>
+                    <ul class="dropdown-menu-header">
+                      <li><a href="#">Gold</a></li>
+                      <li><a href="#">Silver</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Sell Menu -->
+                  <li>
+                    <div class="menu-title">
+                      <a href="#" class="active">Sell</a>
+                      <i class="bi bi-chevron-down arrow" onclick="toggleDropdown(this)"></i>
+                    </div>
+                    <ul class="dropdown-menu-header">
+                      <li class="group-heading">Gold</li>
+                      <li><a href="#">Gold coins</a></li>
+                      <li class="active"><a href="#">Gold bars</a></li>
+
+                      <li class="group-heading">Silver</li>
+                      <li><a href="#">Silver coins</a></li>
+                      <li><a href="#">Silver bars</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a href="#">Jewellery</a></li>
+                  <li><a href="#">Collector coins</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="fixed-header-part">
+      <div class="inner-header-part">
+        <div class="logo-part-navbar-fixed">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="fixed-on-scroll">
+                  <div class="logo-part">
+                    <img src="./images/main-logo.svg" alt="logo" width="155" height="105" loading="lazy"
+                      class="img-fluid" />
+                  </div>
+                  <div class="fixed-header-content">
+                    <div class="info-bar-section">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-12 px-0">
+                            <div class="info-bar">
+                              <!-- Contact Info -->
+                              <div class="info-group">
+                                <div class="info-item">
+                                  <i class="bi bi-telephone"></i>
+                                  <span>+49 (0) 431 12345-0</span>
+                                </div>
+                                <div class="info-item">
+                                  <i class="bi bi-clock"></i>
+                                  <span>Mon-Fri 9.00-18.00 & Sat 9.00-13.00</span>
+                                </div>
+                                <div class="info-item">
+                                  <i class="bi bi-geo-alt"></i>
+                                  <span>Beselerallee 70, 24105 Kiel</span>
+                                </div>
+                              </div>
+
+                              <!-- Gold & Silver Prices -->
+                              <div class="price-group">
+                                <div class="price-item">
+                                  <span class="name">Gold</span>
+                                  <span class="price-number">€1,892.45</span>
+                                  <div class="change">
+                                    <i class="bi bi-caret-up-fill"></i>
+                                    <span class="up">17%</span>
+                                  </div>
+                                </div>
+                                <div class="price-item">
+                                  <span class="name">Silver</span>
+                                  <span class="price-number">€23.67</span>
+                                  <div class="change">
+                                    <i class="bi bi-caret-up-fill"></i>
+                                    <span class="up">17%</span>
+                                  </div>
+                                </div>
+
+                                <!-- Language Switch -->
+                                <div class="language-switch">
+                                  <button id="deBtn" class="active">
+                                    DE
+                                  </button>
+                                  <button id="enBtn">EN</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <nav>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-12 px-0 navbar-header-fixed-part">
+                            <div class="nav-container">
+                              <!-- Mobile Menu Icon -->
+                              <i id="menuIconfix" class="bi bi-list menu-icon" onclick="togglefixMenu()"></i>
+
+                              <ul class="nav-links" id="navlinksfix">
+                                <!-- Buy Menu -->
+                                <li>
+                                  <div class="menu-title">
+                                    <a href="#" active>Buy</a>
+                                    <i class="bi bi-chevron-down arrow" onclick="toggleFixDropdown(this)"></i>
+                                  </div>
+                                  <ul class="dropdown-menu-header">
+                                    <li><a href="#">Gold</a></li>
+                                    <li><a href="#">Silver</a></li>
+                                  </ul>
+                                </li>
+
+                                <!-- Sell Menu -->
+                                <li>
+                                  <div class="menu-title">
+                                    <a href="#" class="active">Sell</a>
+                                    <i class="bi bi-chevron-down arrow" onclick="toggleFixDropdown(this)"></i>
+                                  </div>
+                                  <ul class="dropdown-menu-header">
+                                    <li class="group-heading">Gold</li>
+                                    <li><a href="#">Gold coins</a></li>
+                                    <li class="active">
+                                      <a href="#">Gold bars</a>
+                                    </li>
+
+                                    <li class="group-heading">Silver</li>
+                                    <li><a href="#">Silver coins</a></li>
+                                    <li><a href="#">Silver bars</a></li>
+                                  </ul>
+                                </li>
+
+                                <li><a href="#">Jewellery</a></li>
+                                <li><a href="#">Collector coins</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact us</a></li>
+                              </ul>
+                              <div class="icons">
+                                <div class="icon">
+                                  <a href="#"><i class="bi bi-person"></i></a>
+                                </div>
+                                <div class="icon">
+                                  <a href="#"><i class="bi bi-heart"></i></a>
+                                </div>
+                                <div class="icon">
+                                  <a href="#"><i class="bi bi-cart"></i></a>
+                                  <span class="cart-badge">2</span>
+                                </div>
+                                <div class="icon">
+                                  <a href="javascript:void(0)" onclick="toggleSearchBar()"><i
+                                      class="bi bi-search"></i></a>
+                                </div>
+                              </div>
+                              <!-- Search Bar -->
+                              <div class="toggle-search-bar-part" id="searchBar">
+                                <div class="search-bar">
+                                  <input type="text" placeholder="Search" />
+                                  <button>
+                                    <i class="bi bi-search"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="banner-section product-page-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="banner-content-part">
+              <h1 class="page-name">Buy Gold & Silver Coins</h1>
+              <p class="page-heading-description">
+                Browse items we buy and sell
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="price-update-time">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="price-update">
+              <p>
+                Price update: <span class="dots_part"></span>7 min & 3 Sec
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="breadcrumb-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="breadcrumb">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li class="active">shopping cart</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="cart-container">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>List</th>
+                      <th>Cart Items</th>
+                      <th>Quantity</th>
+                      <th>Total Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Item Row 1 -->
+                    <tr>
+                      <td class="item-number">1</td>
+                      <td class="product-cell">
+                        <div class="product-content">
+                          <img src="./images/checkout-list-products.png" width="187" height="169" class="product-img"
+                            alt="Maple Leaf Silver Coin" />
+                          <div class="product-info">
+                            <div class="item-title">
+                              100 × 1 oz Maple Leaf silver coin
+                            </div>
+                            <div class="item-subtitle">
+                              The Austrian silver ounce has been minted since
+                              2008
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="quantity-cell">
+                        <div class="quantity-control">
+                          <button onclick="updateQuantity(1, -1)">−</button>
+                          <span id="qty-1">1</span>
+                          <button onclick="updateQuantity(1, 1)">+</button>
+                        </div>
+                      </td>
+                      <td class="price-cell">
+                        <div class="item-price">€ 2,891.14</div>
+                      </td>
+                    </tr>
+
+                    <!-- Item Row 2 -->
+                    <tr>
+                      <td class="item-number">2</td>
+                      <td class="product-cell">
+                        <div class="product-content">
+                          <img src="./images/checkout-list-products.png" width="187" height="169" class="product-img"
+                            alt="Maple Leaf Silver Coin" />
+                          <div class="product-info">
+                            <div class="item-title">
+                              100 × 1 oz Maple Leaf silver coin
+                            </div>
+                            <div class="item-subtitle">
+                              The Austrian silver ounce has been minted since
+                              2008
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="quantity-cell">
+                        <div class="quantity-control">
+                          <button onclick="updateQuantity(2, -1)">−</button>
+                          <span id="qty-2">2</span>
+                          <button onclick="updateQuantity(2, 1)">+</button>
+                        </div>
+                      </td>
+                      <td class="price-cell">
+                        <div class="item-price">€ 2,891.14</div>
+                      </td>
+                    </tr>
+
+                    <!-- Item Row 3 -->
+                    <tr>
+                      <td class="item-number">3</td>
+                      <td class="product-cell">
+                        <div class="product-content">
+                          <img src="./images/checkout-list-products.png" width="187" height="169" class="product-img"
+                            alt="Maple Leaf Silver Coin" />
+                          <div class="product-info">
+                            <div class="item-title">
+                              100 × 1 oz Maple Leaf silver coin
+                            </div>
+                            <div class="item-subtitle">
+                              The Austrian silver ounce has been minted since
+                              2008
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="quantity-cell">
+                        <div class="quantity-control">
+                          <button onclick="updateQuantity(3, -1)">−</button>
+                          <span id="qty-3">1</span>
+                          <button onclick="updateQuantity(3, 1)">+</button>
+                        </div>
+                      </td>
+                      <td class="price-cell">
+                        <div class="item-price">€ 2,891.14</div>
+                      </td>
+                    </tr>
+
+                    <!-- Summary Rows -->
+                    <tr class="summary-row">
+                      <td></td>
+                      <td colspan="2">Sub total</td>
+                      <td class="text-end" id="subtotal">€ 8,254.12</td>
+                    </tr>
+                    <tr class="summary-row">
+                      <td></td>
+                      <td>VAT included</td>
+                      <td>
+                        <span class="vat-info">(19%)</span>
+                      </td>
+                      <td class="text-end" id="vat">€ 1,311.31</td>
+                    </tr>
+                    <tr class="summary-row total">
+                      <td></td>
+                      <td colspan="2" class="tm">Total Amount</td>
+                      <td class="text-end total-price">€ 8,254.12</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Checkout Section -->
+              <div class="checkout-section">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="termsCheck" onchange="toggleCheckout()" />
+                  <label class="form-check-label" for="termsCheck">
+                    I have read and agreed with the terms of service and
+                    privacy policy.
+                  </label>
+                </div>
+                <button class="btn btn-checkout" id="checkoutBtn">
+                  Check out
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-slider-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-30 mb-20">
+            <h2 class="section-heading text-center">
+              Other similar products
+            </h2>
+            <p class="regular-paragraph text-center paragraph-margin-top">
+              Lorem ipsum dolor sit amet consectetur.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading-part-slider">
+              <h2 class="heading-part">Gold coins</h2>
+              <div class="view-all-buttons">
+                <a href="#">
+                  <span> View all </span><i class="bi bi-arrow-right-circle"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="swiper swiper-slider">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                  <div class="product-card-slider">
+                    <a href="#" class="wishlist-icon"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="products-slide-image">
+                      <img src="./images/coins.png" class="img-fluid" alt="Coin" width="174" height="174"
+                        loading="lazy" />
+                    </a>
+                    <a href="#" class="product-name">Krugerrand 1 ounce</a>
+                    <div class="price-add">
+                      <div class="price">€ 2,891.14</div>
+                      <a href="#" class="add-to-cart-link"><i class="bi bi-cart2"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sample slides -->
+                <div class="swiper-slide">
+                  <div class="product-card-slider">
+                    <a href="#" class="wishlist-icon"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="products-slide-image">
+                      <img src="./images/coins.png" class="img-fluid" alt="Coin" width="174" height="174"
+                        loading="lazy" />
+                    </a>
+                    <a href="#" class="product-name">Krugerrand 1 ounce</a>
+                    <div class="price-add">
+                      <div class="price">€ 2,891.14</div>
+                      <a href="#" class="add-to-cart-link"><i class="bi bi-cart2"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card-slider">
+                    <a href="#" class="wishlist-icon"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="products-slide-image">
+                      <img src="./images/coins.png" class="img-fluid" alt="Coin" width="174" height="174"
+                        loading="lazy" />
+                    </a>
+                    <a href="#" class="product-name">Krugerrand 1 ounce</a>
+                    <div class="price-add">
+                      <div class="price">€ 2,891.14</div>
+                      <a href="#" class="add-to-cart-link"><i class="bi bi-cart2"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card-slider">
+                    <a href="#" class="wishlist-icon"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="products-slide-image">
+                      <img src="./images/coins.png" class="img-fluid" alt="Coin" width="174" height="174"
+                        loading="lazy" />
+                    </a>
+                    <a href="#" class="product-name">Krugerrand 1 ounce</a>
+                    <div class="price-add">
+                      <div class="price">€ 2,891.14</div>
+                      <a href="#" class="add-to-cart-link"><i class="bi bi-cart2"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card-slider">
+                    <a href="#" class="wishlist-icon"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="products-slide-image">
+                      <img src="./images/coins.png" class="img-fluid" alt="Coin" width="174" height="174"
+                        loading="lazy" />
+                    </a>
+                    <a href="#" class="product-name">Krugerrand 1 ounce</a>
+                    <div class="price-add">
+                      <div class="price">€ 2,891.14</div>
+                      <a href="#" class="add-to-cart-link"><i class="bi bi-cart2"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card-slider">
+                    <a href="#" class="wishlist-icon"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="products-slide-image">
+                      <img src="./images/coins.png" class="img-fluid" alt="Coin" width="174" height="174"
+                        loading="lazy" />
+                    </a>
+                    <a href="#" class="product-name">Krugerrand 1 ounce</a>
+                    <div class="price-add">
+                      <div class="price">€ 2,891.14</div>
+                      <a href="#" class="add-to-cart-link"><i class="bi bi-cart2"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card-slider">
+                    <a href="#" class="wishlist-icon"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="products-slide-image">
+                      <img src="./images/coins.png" class="img-fluid" alt="Coin" width="174" height="174"
+                        loading="lazy" />
+                    </a>
+                    <a href="#" class="product-name">Krugerrand 1 ounce</a>
+                    <div class="price-add">
+                      <div class="price">€ 2,891.14</div>
+                      <a href="#" class="add-to-cart-link"><i class="bi bi-cart2"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card-slider">
+                    <a href="#" class="wishlist-icon"><i class="bi bi-heart"></i></a>
+                    <a href="#" class="products-slide-image">
+                      <img src="./images/coins.png" class="img-fluid" alt="Coin" width="174" height="174"
+                        loading="lazy" />
+                    </a>
+                    <a href="#" class="product-name">Krugerrand 1 ounce</a>
+                    <div class="price-add">
+                      <div class="price">€ 2,891.14</div>
+                      <a href="#" class="add-to-cart-link"><i class="bi bi-cart2"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-in-trading-coins section-margin-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-30">
+            <h2 class="heading-part">
+              F&Q or anything related to coins listing
+            </h2>
+          </div>
+          <div class="col-md-12">
+            <div class="info-container">
+              <div class="info-box">
+                <img src="./images/star.svg" alt="Icon Image" width="26" height="26" loading="lazy" />
+                <div class="info-text">
+                  Our offering for investors is extraordinarily comprehensive.
+                  We offer a wide range of small gold coins for special
+                  occasions, gold and silver ounces from various countries and
+                  motifs, and bars in various weight units for investors.
+                </div>
+              </div>
+              <div class="info-box">
+                <img src="./images/star.svg" alt="Icon Image" width="26" height="26" loading="lazy" />
+                <div class="info-text">
+                  We offer sellers of valuable jewelry, precious metals,
+                  coins, and scrap gold a free appraisal, fair advice, and a
+                  valuation at the current daily price, which we will pay out
+                  immediately in cash without deductions upon request.
+                </div>
+              </div>
+              <div class="info-box">
+                <img src="./images/star.svg" alt="Icon Image" width="26" height="26" loading="lazy" />
+                <div class="info-text">
+                  Our selling prices are directly linked to the stock exchange
+                  price and are therefore always at the current market level.
+                </div>
+              </div>
+              <div class="info-box">
+                <img src="./images/star.svg" alt="Icon Image" width="26" height="26" loading="lazy" />
+                <div class="info-text">
+                  When looking for a partner, trust in reliability. We have
+                  been a member of the German Coin Trade Association for over
+                  25 years and stand for competent advice and fair prices.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row footer-links-row">
+        <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0">
+          <div class="footer-logo-part">
+            <img src="./images/Footer_logo.png" width="140" height="140px" alt="footer logo" loading="lazy" />
+          </div>
+          <div class="contact-info-div">
+            <p>
+              E-mail :
+              <span>
+                <a href="mailto:info@pacht-kiel.de">info@pacht-kiel.de</a></span>
+            </p>
+            <p>
+              Phone :
+              <span>
+                <a href="tel:0431 - 805 81 85">0431 - 805 81 85</a></span>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+          <div class="office-address">
+            <h4 class="footer-link-heading">Head Office</h4>
+            <p>
+              Xilliams Corner Wine © 2017. 1112 A Market St # Ste B22,
+              Charlottesville, CA 45565
+            </p>
+          </div>
+          <div class="office-timing">
+            <h4 class="footer-link-heading">Opening hours</h4>
+            <div class="day">
+              <span>Mon - Fri </span>
+              <span> 9:00 - 18:00</span>
+            </div>
+            <div class="day">
+              <span>Mon - Fri </span>
+              <span> 9:00 - 18:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6 mb-4 mb-sm-0">
+          <h4 class="footer-link-heading">Sitemap</h4>
+          <ul class="pages-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Abouts</a></li>
+            <li><a href="#">imprint</a></li>
+            <li><a href="#">Data protection</a></li>
+            <li><a href="#">Directions</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0">
+          <h4 class="footer-link-heading">Online Shop</h4>
+          <ul class="pages-links">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">registration</a></li>
+            <li><a href="#">Shipping costs</a></li>
+            <li><a href="#">Payment methods</a></li>
+            <li><a href="#">Terms and Conditions Online Shop</a></li>
+            <li><a href="#">Cancellation policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row copyrightrow">
+        <div class="col-md-12 text-center">
+          <p>© 2020 RainstreamTechnologies All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script>
+    // Toggle function to show/hide search bar
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration page</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <header class="header-section">
+      <div class="header-top">
+        <p class="offer-tag-line">
+          <strong> Limited time offer:</strong> 0% Transaction fees on all gold
+          bar purchases <strong> until Dec 31st!</strong>
+        </p>
+        <div class="offer-close-btn">
+          <button class="close-btn" onclick="closeOffer()">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div class="main-header-part">
+        <div class="info-bar-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-bar">
+                  <!-- Contact Info -->
+                  <div class="info-group">
+                    <div class="info-item">
+                      <i class="bi bi-telephone"></i>
+                      <span>+49 (0) 431 12345-0</span>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-clock"></i>
+                      <span>Mon-Fri 9.00-18.00 & Sat 9.00-13.00</span>
+                    </div>
+                    <div class="info-item">
+                      <i class="bi bi-geo-alt"></i>
+                      <span>Beselerallee 70, 24105 Kiel</span>
+                    </div>
+                  </div>
+
+                  <!-- Gold & Silver Prices -->
+                  <div class="price-group">
+                    <div class="price-item">
+                      <span class="name">Gold</span>
+                      <span class="price-number">€1,892.45</span>
+                      <div class="change">
+                        <i class="bi bi-caret-up-fill"></i>
+                        <span class="up">17%</span>
+                      </div>
+                    </div>
+                    <div class="price-item">
+                      <span class="name">Silver</span>
+                      <span class="price-number">€23.67</span>
+                      <div class="change">
+                        <i class="bi bi-caret-up-fill"></i>
+                        <span class="up">17%</span>
+                      </div>
+                    </div>
+
+                    <!-- Language Switch -->
+                    <div class="language-switch">
+                      <button id="deBtn" class="active">DE</button>
+                      <button id="enBtn">EN</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="logo-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="logo-part-navbar">
+                  <div class="logo">
+                    <img
+                      src="./images/main-logo.svg"
+                      alt="logo"
+                      width="155"
+                      height="105"
+                      loading="lazy"
+                      class="img-fluid"
+                    />
+                    <div class="search-bar">
+                      <input type="text" placeholder="Search" />
+                      <button><i class="bi bi-search"></i></button>
+                    </div>
+                  </div>
+
+                  <div class="icons">
+                    <div class="icon">
+                      <a href="#"><i class="bi bi-person"></i></a>
+                    </div>
+                    <div class="icon">
+                      <a href="#"><i class="bi bi-heart"></i></a>
+                    </div>
+                    <div class="icon">
+                      <a href="#"><i class="bi bi-cart"></i></a>
+                      <span class="cart-badge">2</span>
+                    </div>
+                    <div class="icon">
+                      <i
+                        id="menuIcon"
+                        class="bi bi-list menu-icon"
+                        onclick="toggleMenu()"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="nav-container">
+                  <!-- Mobile Menu Icon -->
+
+                  <ul class="nav-links" id="navLinks">
+                    <!-- Buy Menu -->
+                    <li>
+                      <div class="menu-title">
+                        <a href="#" active>Buy</a>
+                        <i
+                          class="bi bi-chevron-down arrow"
+                          onclick="toggleDropdown(this)"
+                        ></i>
+                      </div>
+                      <ul class="dropdown-menu-header">
+                        <li><a href="#">Gold</a></li>
+                        <li><a href="#">Silver</a></li>
+                      </ul>
+                    </li>
+
+                    <!-- Sell Menu -->
+                    <li>
+                      <div class="menu-title">
+                        <a href="#" class="active">Sell</a>
+                        <i
+                          class="bi bi-chevron-down arrow"
+                          onclick="toggleDropdown(this)"
+                        ></i>
+                      </div>
+                      <ul class="dropdown-menu-header">
+                        <li class="group-heading">Gold</li>
+                        <li><a href="#">Gold coins</a></li>
+                        <li class="active"><a href="#">Gold bars</a></li>
+
+                        <li class="group-heading">Silver</li>
+                        <li><a href="#">Silver coins</a></li>
+                        <li><a href="#">Silver bars</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a href="#">Jewellery</a></li>
+                    <li><a href="#">Collector coins</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="fixed-header-part">
+        <div class="inner-header-part">
+          <div class="logo-part-navbar-fixed">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="fixed-on-scroll">
+                    <div class="logo-part">
+                      <img
+                        src="./images/main-logo.svg"
+                        alt="logo"
+                        width="155"
+                        height="105"
+                        loading="lazy"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="fixed-header-content">
+                      <div class="info-bar-section">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-12 px-0">
+                              <div class="info-bar">
+                                <!-- Contact Info -->
+                                <div class="info-group">
+                                  <div class="info-item">
+                                    <i class="bi bi-telephone"></i>
+                                    <span>+49 (0) 431 12345-0</span>
+                                  </div>
+                                  <div class="info-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span
+                                      >Mon-Fri 9.00-18.00 & Sat 9.00-13.00</span
+                                    >
+                                  </div>
+                                  <div class="info-item">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span>Beselerallee 70, 24105 Kiel</span>
+                                  </div>
+                                </div>
+
+                                <!-- Gold & Silver Prices -->
+                                <div class="price-group">
+                                  <div class="price-item">
+                                    <span class="name">Gold</span>
+                                    <span class="price-number">€1,892.45</span>
+                                    <div class="change">
+                                      <i class="bi bi-caret-up-fill"></i>
+                                      <span class="up">17%</span>
+                                    </div>
+                                  </div>
+                                  <div class="price-item">
+                                    <span class="name">Silver</span>
+                                    <span class="price-number">€23.67</span>
+                                    <div class="change">
+                                      <i class="bi bi-caret-up-fill"></i>
+                                      <span class="up">17%</span>
+                                    </div>
+                                  </div>
+
+                                  <!-- Language Switch -->
+                                  <div class="language-switch">
+                                    <button id="deBtn" class="active">
+                                      DE
+                                    </button>
+                                    <button id="enBtn">EN</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <nav>
+                        <div class="container">
+                          <div class="row">
+                            <div
+                              class="col-md-12 px-0 navbar-header-fixed-part"
+                            >
+                              <div class="nav-container">
+                                <!-- Mobile Menu Icon -->
+                                <i
+                                  id="menuIconfix"
+                                  class="bi bi-list menu-icon"
+                                  onclick="togglefixMenu()"
+                                ></i>
+
+                                <ul class="nav-links" id="navlinksfix">
+                                  <!-- Buy Menu -->
+                                  <li>
+                                    <div class="menu-title">
+                                      <a href="#" active>Buy</a>
+                                      <i
+                                        class="bi bi-chevron-down arrow"
+                                        onclick="toggleFixDropdown(this)"
+                                      ></i>
+                                    </div>
+                                    <ul class="dropdown-menu-header">
+                                      <li><a href="#">Gold</a></li>
+                                      <li><a href="#">Silver</a></li>
+                                    </ul>
+                                  </li>
+
+                                  <!-- Sell Menu -->
+                                  <li>
+                                    <div class="menu-title">
+                                      <a href="#" class="active">Sell</a>
+                                      <i
+                                        class="bi bi-chevron-down arrow"
+                                        onclick="toggleFixDropdown(this)"
+                                      ></i>
+                                    </div>
+                                    <ul class="dropdown-menu-header">
+                                      <li class="group-heading">Gold</li>
+                                      <li><a href="#">Gold coins</a></li>
+                                      <li class="active">
+                                        <a href="#">Gold bars</a>
+                                      </li>
+
+                                      <li class="group-heading">Silver</li>
+                                      <li><a href="#">Silver coins</a></li>
+                                      <li><a href="#">Silver bars</a></li>
+                                    </ul>
+                                  </li>
+
+                                  <li><a href="#">Jewellery</a></li>
+                                  <li><a href="#">Collector coins</a></li>
+                                  <li><a href="#">About us</a></li>
+                                  <li><a href="#">Contact us</a></li>
+                                </ul>
+                                <div class="icons">
+                                  <div class="icon">
+                                    <a href="#"><i class="bi bi-person"></i></a>
+                                  </div>
+                                  <div class="icon">
+                                    <a href="#"><i class="bi bi-heart"></i></a>
+                                  </div>
+                                  <div class="icon">
+                                    <a href="#"><i class="bi bi-cart"></i></a>
+                                    <span class="cart-badge">2</span>
+                                  </div>
+                                  <div class="icon">
+                                    <a
+                                      href="javascript:void(0)"
+                                      onclick="toggleSearchBar()"
+                                      ><i class="bi bi-search"></i
+                                    ></a>
+                                  </div>
+                                </div>
+                                <!-- Search Bar -->
+                                <div
+                                  class="toggle-search-bar-part"
+                                  id="searchBar"
+                                >
+                                  <div class="search-bar">
+                                    <input type="text" placeholder="Search" />
+                                    <button>
+                                      <i class="bi bi-search"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="banner-section product-page-banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="banner-content-part">
+                <h1 class="page-name">Registration</h1>
+                <p class="page-heading-description">
+                  Register here for our online shop.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="breadcrumb-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="breadcrumb">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li class="active">Registration</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="registration-form-section">
+        <div class="registration-form">
+          <div class="container">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <div class="row">
+                      <div class="col-md-6 inner-field-gap">
+                        <label class="form-label" for="first-name"
+                          >First name</label
+                        >
+                        <input
+                          type="text"
+                          id="first-name"
+                          class="form-control"
+                          placeholder="Enter your first name"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="last-name"
+                          >Last name</label
+                        >
+                        <input
+                          type="text"
+                          id="last-name"
+                          class="form-control"
+                          placeholder="Enter your last name"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <label class="form-label" for="country">Country *</label>
+                    <input
+                      type="text"
+                      id="country"
+                      class="form-control"
+                      placeholder="India"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <label class="form-label" for="birth-date"
+                      >Birth date</label
+                    >
+                    <input type="date" id="birth-date" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <label class="form-label" for="telephone"
+                      >Telephone number</label
+                    >
+                    <input
+                      type="text"
+                      id="telephone"
+                      class="form-control"
+                      placeholder="Enter your phone"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <label class="form-label" for="gender">Gender</label>
+                    <select class="form-select" id="gender">
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <label class="form-label" for="mobile">Mobile number</label>
+                    <input
+                      type="text"
+                      id="mobile"
+                      class="form-control"
+                      placeholder="Enter your mobile"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <label class="form-label" for="company">Company</label>
+                    <input
+                      type="text"
+                      id="company"
+                      class="form-control"
+                      placeholder="Enter your company"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <label class="form-label" for="fax">Fax number</label>
+                    <input
+                      type="text"
+                      id="fax"
+                      class="form-control"
+                      placeholder="Enter your fax"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <label class="form-label" for="street">Street</label>
+                    <input
+                      type="text"
+                      id="street"
+                      class="form-control"
+                      placeholder="Enter your street"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <label class="form-label" for="email"
+                      >E-mail address *</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      placeholder="abc@gmail.com"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <label class="form-label" for="postal-code"
+                      >Postal code</label
+                    >
+                    <input
+                      type="text"
+                      id="postal-code"
+                      class="form-control"
+                      placeholder="Enter postal code"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <label class="form-label" for="username">Username *</label>
+                    <input
+                      type="text"
+                      id="username"
+                      class="form-control"
+                      placeholder="role0072"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <label class="form-label" for="location">Location</label>
+                    <input
+                      type="text"
+                      id="location"
+                      class="form-control"
+                      placeholder="Enter your location"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <label class="form-label" for="password">Password *</label>
+                    <input
+                      type="password"
+                      id="password"
+                      class="form-control"
+                      placeholder="Enter your password"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="field-gap">
+                    <div class="form-check mt-4">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="privacyCheck"
+                      />
+                      <label class="form-check-label" for="privacyCheck">
+                        I agree to the Privacy Policy
+                      </label>
+                    </div>
+
+                    <div class="mt-4">
+                      <a type="submit" class="btn btn-register">
+                        Register now
+                      </a>
+                    </div>
+
+                    <div class="mt-3 text-link">
+                      Already have a account? <a href="#">Login now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row footer-links-row">
+          <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0">
+            <div class="footer-logo-part">
+              <img
+                src="./images/Footer_logo.png"
+                width="140"
+                height="140px"
+                alt="footer logo"
+                loading="lazy"
+              />
+            </div>
+            <div class="contact-info-div">
+              <p>
+                E-mail :
+                <span>
+                  <a href="mailto:info@pacht-kiel.de"
+                    >info@pacht-kiel.de</a
+                  ></span
+                >
+              </p>
+              <p>
+                Phone :
+                <span>
+                  <a href="tel:0431 - 805 81 85">0431 - 805 81 85</a></span
+                >
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+            <div class="office-address">
+              <h4 class="footer-link-heading">Head Office</h4>
+              <p>
+                Xilliams Corner Wine © 2017. 1112 A Market St # Ste B22,
+                Charlottesville, CA 45565
+              </p>
+            </div>
+            <div class="office-timing">
+              <h4 class="footer-link-heading">Opening hours</h4>
+              <div class="day">
+                <span>Mon - Fri </span>
+                <span> 9:00 - 18:00</span>
+              </div>
+              <div class="day">
+                <span>Mon - Fri </span>
+                <span> 9:00 - 18:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6 mb-4 mb-sm-0">
+            <h4 class="footer-link-heading">Sitemap</h4>
+            <ul class="pages-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Abouts</a></li>
+              <li><a href="#">imprint</a></li>
+              <li><a href="#">Data protection</a></li>
+              <li><a href="#">Directions</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0">
+            <h4 class="footer-link-heading">Online Shop</h4>
+            <ul class="pages-links">
+              <li><a href="#">Login</a></li>
+              <li><a href="#">registration</a></li>
+              <li><a href="#">Shipping costs</a></li>
+              <li><a href="#">Payment methods</a></li>
+              <li><a href="#">Terms and Conditions Online Shop</a></li>
+              <li><a href="#">Cancellation policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row copyrightrow">
+          <div class="col-md-12 text-center">
+            <p>© 2020 RainstreamTechnologies All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+      // Toggle function to show/hide search bar
+    </script>
+  </body>
+</html>

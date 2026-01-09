@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account page</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap-icons.min.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+
+<body>
+  <header class="header-section">
+    <div class="header-top">
+      <p class="offer-tag-line">
+        <strong> Limited time offer:</strong> 0% Transaction fees on all gold
+        bar purchases <strong> until Dec 31st!</strong>
+      </p>
+      <div class="offer-close-btn">
+        <button class="close-btn" onclick="closeOffer()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+    </div>
+    <div class="main-header-part">
+      <div class="info-bar-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="info-bar">
+                <!-- Contact Info -->
+                <div class="info-group">
+                  <div class="info-item">
+                    <i class="bi bi-telephone"></i>
+                    <span>+49 (0) 431 12345-0</span>
+                  </div>
+                  <div class="info-item">
+                    <i class="bi bi-clock"></i>
+                    <span>Mon-Fri 9.00-18.00 & Sat 9.00-13.00</span>
+                  </div>
+                  <div class="info-item">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Beselerallee 70, 24105 Kiel</span>
+                  </div>
+                </div>
+
+                <!-- Gold & Silver Prices -->
+                <div class="price-group">
+                  <div class="price-item">
+                    <span class="name">Gold</span>
+                    <span class="price-number">€1,892.45</span>
+                    <div class="change">
+                      <i class="bi bi-caret-up-fill"></i>
+                      <span class="up">17%</span>
+                    </div>
+                  </div>
+                  <div class="price-item">
+                    <span class="name">Silver</span>
+                    <span class="price-number">€23.67</span>
+                    <div class="change">
+                      <i class="bi bi-caret-up-fill"></i>
+                      <span class="up">17%</span>
+                    </div>
+                  </div>
+
+                  <!-- Language Switch -->
+                  <div class="language-switch">
+                    <button id="deBtn" class="active">DE</button>
+                    <button id="enBtn">EN</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="logo-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="logo-part-navbar">
+                <div class="logo">
+                  <img src="./images/main-logo.svg" alt="logo" width="155" height="105" loading="lazy"
+                    class="img-fluid" />
+                  <div class="search-bar">
+                    <input type="text" placeholder="Search" />
+                    <button><i class="bi bi-search"></i></button>
+                  </div>
+                </div>
+
+                <div class="icons">
+                  <div class="icon">
+                    <a href="#"><i class="bi bi-person"></i></a>
+                  </div>
+                  <div class="icon">
+                    <a href="#"><i class="bi bi-heart"></i></a>
+                  </div>
+                  <div class="icon">
+                    <a href="#"><i class="bi bi-cart"></i></a>
+                    <span class="cart-badge">2</span>
+                  </div>
+                  <div class="icon">
+                    <i id="menuIcon" class="bi bi-list menu-icon" onclick="toggleMenu()"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="nav-container">
+                <!-- Mobile Menu Icon -->
+
+                <ul class="nav-links" id="navLinks">
+                  <!-- Buy Menu -->
+                  <li>
+                    <div class="menu-title">
+                      <a href="#" active>Buy</a>
+                      <i class="bi bi-chevron-down arrow" onclick="toggleDropdown(this)"></i>
+                    </div>
+                    <ul class="dropdown-menu-header">
+                      <li><a href="#">Gold</a></li>
+                      <li><a href="#">Silver</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Sell Menu -->
+                  <li>
+                    <div class="menu-title">
+                      <a href="#" class="active">Sell</a>
+                      <i class="bi bi-chevron-down arrow" onclick="toggleDropdown(this)"></i>
+                    </div>
+                    <ul class="dropdown-menu-header">
+                      <li class="group-heading">Gold</li>
+                      <li><a href="#">Gold coins</a></li>
+                      <li class="active"><a href="#">Gold bars</a></li>
+
+                      <li class="group-heading">Silver</li>
+                      <li><a href="#">Silver coins</a></li>
+                      <li><a href="#">Silver bars</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a href="#">Jewellery</a></li>
+                  <li><a href="#">Collector coins</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="fixed-header-part">
+      <div class="inner-header-part">
+        <div class="logo-part-navbar-fixed">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="fixed-on-scroll">
+                  <div class="logo-part">
+                    <img src="./images/main-logo.svg" alt="logo" width="155" height="105" loading="lazy"
+                      class="img-fluid" />
+                  </div>
+                  <div class="fixed-header-content">
+                    <div class="info-bar-section">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-12 px-0">
+                            <div class="info-bar">
+                              <!-- Contact Info -->
+                              <div class="info-group">
+                                <div class="info-item">
+                                  <i class="bi bi-telephone"></i>
+                                  <span>+49 (0) 431 12345-0</span>
+                                </div>
+                                <div class="info-item">
+                                  <i class="bi bi-clock"></i>
+                                  <span>Mon-Fri 9.00-18.00 & Sat 9.00-13.00</span>
+                                </div>
+                                <div class="info-item">
+                                  <i class="bi bi-geo-alt"></i>
+                                  <span>Beselerallee 70, 24105 Kiel</span>
+                                </div>
+                              </div>
+
+                              <!-- Gold & Silver Prices -->
+                              <div class="price-group">
+                                <div class="price-item">
+                                  <span class="name">Gold</span>
+                                  <span class="price-number">€1,892.45</span>
+                                  <div class="change">
+                                    <i class="bi bi-caret-up-fill"></i>
+                                    <span class="up">17%</span>
+                                  </div>
+                                </div>
+                                <div class="price-item">
+                                  <span class="name">Silver</span>
+                                  <span class="price-number">€23.67</span>
+                                  <div class="change">
+                                    <i class="bi bi-caret-up-fill"></i>
+                                    <span class="up">17%</span>
+                                  </div>
+                                </div>
+
+                                <!-- Language Switch -->
+                                <div class="language-switch">
+                                  <button id="deBtn" class="active">
+                                    DE
+                                  </button>
+                                  <button id="enBtn">EN</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <nav>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-12 px-0 navbar-header-fixed-part">
+                            <div class="nav-container">
+                              <!-- Mobile Menu Icon -->
+                              <i id="menuIconfix" class="bi bi-list menu-icon" onclick="togglefixMenu()"></i>
+
+                              <ul class="nav-links" id="navlinksfix">
+                                <!-- Buy Menu -->
+                                <li>
+                                  <div class="menu-title">
+                                    <a href="#" active>Buy</a>
+                                    <i class="bi bi-chevron-down arrow" onclick="toggleFixDropdown(this)"></i>
+                                  </div>
+                                  <ul class="dropdown-menu-header">
+                                    <li><a href="#">Gold</a></li>
+                                    <li><a href="#">Silver</a></li>
+                                  </ul>
+                                </li>
+
+                                <!-- Sell Menu -->
+                                <li>
+                                  <div class="menu-title">
+                                    <a href="#" class="active">Sell</a>
+                                    <i class="bi bi-chevron-down arrow" onclick="toggleFixDropdown(this)"></i>
+                                  </div>
+                                  <ul class="dropdown-menu-header">
+                                    <li class="group-heading">Gold</li>
+                                    <li><a href="#">Gold coins</a></li>
+                                    <li class="active">
+                                      <a href="#">Gold bars</a>
+                                    </li>
+
+                                    <li class="group-heading">Silver</li>
+                                    <li><a href="#">Silver coins</a></li>
+                                    <li><a href="#">Silver bars</a></li>
+                                  </ul>
+                                </li>
+
+                                <li><a href="#">Jewellery</a></li>
+                                <li><a href="#">Collector coins</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact us</a></li>
+                              </ul>
+                              <div class="icons">
+                                <div class="icon">
+                                  <a href="#"><i class="bi bi-person"></i></a>
+                                </div>
+                                <div class="icon">
+                                  <a href="#"><i class="bi bi-heart"></i></a>
+                                </div>
+                                <div class="icon">
+                                  <a href="#"><i class="bi bi-cart"></i></a>
+                                  <span class="cart-badge">2</span>
+                                </div>
+                                <div class="icon">
+                                  <a href="javascript:void(0)" onclick="toggleSearchBar()"><i
+                                      class="bi bi-search"></i></a>
+                                </div>
+                              </div>
+                              <!-- Search Bar -->
+                              <div class="toggle-search-bar-part" id="searchBar">
+                                <div class="search-bar">
+                                  <input type="text" placeholder="Search" />
+                                  <button>
+                                    <i class="bi bi-search"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+
+
+    <section class="banner-section product-page-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="banner-content-part">
+              <h1 class="page-name">Account</h1>
+              <p class="page-heading-description">
+                Browse items we buy and sell
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="breadcrumb-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="breadcrumb">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li class="active">account</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="account-tab section-margin-bottom">
+      <div class="container">
+        <!-- Tabs + Accordion -->
+        <div class="row">
+          <!-- Sidebar Navigation (Tabs - Desktop) -->
+          <div class="col-12 col-lg-4 d-lg-block">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" data-bs-toggle="pill" href="#panel1">Dashboard</a>
+              <a class="nav-link" data-bs-toggle="pill" href="#panel2">Account Details</a>
+              <a class="nav-link" data-bs-toggle="pill" href="#panel3">Orders</a>
+              <a class="nav-link" data-bs-toggle="pill" href="#panel4">Addresses</a>
+              <a class="log-out nav-link" data-bs-toggle="pill" href="#panel5">Log out</a>
+            </div>
+          </div>
+
+          <!-- Tab Content (Desktop only) -->
+          <div class="col-12 col-lg-8  d-lg-block">
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="panel1">
+                <h3>Panel 1 Content</h3>
+                <p>This is the content for Panel 1.</p>
+              </div>
+
+              <div class="tab-pane fade" id="panel2">
+                <div class="row personal-heading-text">
+                  <div class="col-12">
+                    <h5>Personal Details</h5>
+                  </div>
+                </div>
+                <div class="row personal-details-form">
+                  <div class="col-12 col-md-6 input-images">
+                    <label class="form-label">First name</label>
+                    <input type="text" class="form-control" placeholder="First name">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="icon-image">
+                  </div>
+                  <div class="col-12 col-md-6 input-images">
+                    <label class="form-label">Last name</label>
+                    <input type="text" class="form-control" placeholder="Last name">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="icon-image">
+                  </div>
+                  <div class="col-12 col-md-6 input-images">
+                    <label class="form-label">Birth date</label>
+                    <input type="text" class="form-control" placeholder="05.05.2000">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="icon-image">
+                  </div>
+                  <div class="col-12 col-md-6 input-images">
+                    <label class="form-label">Gender</label>
+                    <input type="text" class="form-control" placeholder="Male">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="icon-image">
+                  </div>
+                  <div class="col-12 col-md-6 input-images">
+                    <label class="form-label">Postal code</label>
+                    <input type="text" class="form-control" placeholder="524541">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="icon-image">
+                  </div>
+                  <div class="col-12 col-md-6 input-images">
+                    <label class="form-label">Location</label>
+                    <input type="text" class="form-control" placeholder="Berlin, Germany">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="icon-image">
+                  </div>
+                  <div class="col-12 input-images">
+                    <label class="form-label">Email*</label>
+                    <input type="text" class="form-control" placeholder="example@mail.com">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="icon-image">
+                  </div>
+                  <div class="col-12 input-images">
+                    <label class="form-label">Phone</label>
+                    <input type="text" class="form-control" placeholder="+49 123 456 789">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="icon-image">
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn">Save Details</button>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane fade" id="panel3">
+                 <!-- Orders content 1-->
+                    <div class="order-item">
+                      <div class="product-content d-flex justify-content-between align-items-center">
+                        <div class="d-flex product-images-box">
+                          <img src="images/mony.png" class="product-img" alt="Maple Leaf Silver Coin" />
+                          <div class="product-info ms-3">
+                            <div class="item-title">100 × 1 oz Maple Leaf silver coin</div>
+                            <div class="item-subtitle">The Austrian silver ounce has been minted since 2008</div>
+                            <a href="#" class="btn-process">In process</a>
+                          </div>
+                        </div>
+                        <div class="item-price">€ 2,891.14</div>
+                      </div>
+                      <div class="divider-line"></div>
+                    </div>
+                    <!-- Orders content 2-->
+                    <div class="order-item">
+                      <div class="product-content d-flex justify-content-between align-items-center">
+                        <div class="d-flex product-images-box">
+                          <img src="images/mony.png" class="product-img" alt="Maple Leaf Silver Coin" />
+                          <div class="product-info ms-3">
+                            <div class="item-title">100 × 1 oz Maple Leaf silver coin</div>
+                            <div class="item-subtitle">The Austrian silver ounce has been minted since 2008</div>
+                            <a href="#" class="btn-process">In process</a>
+                          </div>
+                        </div>
+                        <div class="item-price">€ 2,891.14</div>
+                      </div>
+                      <div class="divider-line"></div>
+                    </div>
+                    <!-- Orders content 3-->
+                    <div class="order-item">
+                      <div class="product-content d-flex justify-content-between align-items-center">
+                        <div class="d-flex product-images-box">
+                          <img src="images/mony.png" class="product-img" alt="Maple Leaf Silver Coin" />
+                          <div class="product-info ms-3">
+                            <div class="item-title">100 × 1 oz Maple Leaf silver coin</div>
+                            <div class="item-subtitle">The Austrian silver ounce has been minted since 2008</div>
+                            <a href="#" class="btn-delivered ">In process</a>
+                          </div>
+                        </div>
+                        <div class="item-price">€ 2,891.14</div>
+                      </div>
+                      <div class="divider-line"></div>
+                    </div>
+              </div>
+
+              <div class="tab-pane fade" id="panel4">
+                <div class="row personal-heading-text">
+                  <div class="col-12">
+                    <h5>Billing Address</h5>
+                  </div>
+                </div>
+                <div class="row personal-details-form">
+                  <div class="col-12 col-md-6 input-images">
+                    <label class="form-label">Postal code</label>
+                    <input type="text" class="form-control" placeholder="524541">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="">
+                  </div>
+                  <div class="col-12 col-md-6 input-images">
+                    <label class="form-label">Location</label>
+                    <input type="text" class="form-control" placeholder="Germany">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="">
+                  </div>
+                  <div class="col-12 input-images">
+                    <label class="form-label">Address*</label>
+                    <input type="text" class="form-control" placeholder="121 Lorem Ipsum">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="">
+                  </div>
+                  <div class="col-12 input-images">
+                    <label class="form-label">Landmark (optional)</label>
+                    <input type="text" class="form-control" placeholder="Near City Center">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="">
+                  </div>
+                </div>
+
+                <div class="row personal-heading-text shipping-address">
+                  <div class="col-12">
+                    <h5>Shipping Address</h5>
+                  </div>
+                </div>
+                <div class="row personal-details-form">
+                  <div class="col-12 col-md-6 input-images">
+                    <label class="form-label">Postal code</label>
+                    <input type="text" class="form-control" placeholder="524541">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="">
+                  </div>
+                  <div class="col-12 col-md-6 input-images">
+                    <label class="form-label">Location</label>
+                    <input type="text" class="form-control" placeholder="Germany">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="">
+                  </div>
+                  <div class="col-12 input-images">
+                    <label class="form-label">Address*</label>
+                    <input type="text" class="form-control" placeholder="121 Lorem Ipsum">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="">
+                  </div>
+                  <div class="col-12 input-images">
+                    <label class="form-label">Landmark (optional)</label>
+                    <input type="text" class="form-control" placeholder="Near City Center">
+                    <img src="images/achievement/iconamoon_edit-light.svg" class="input-icon" alt="">
+                  </div>
+                  <div class="col-7">
+                    <button type="submit" class="shipping-address-btn">Save Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row footer-links-row">
+        <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0">
+          <div class="footer-logo-part">
+            <img src="./images/Footer_logo.png" width="140" height="140px" alt="footer logo" loading="lazy" />
+          </div>
+          <div class="contact-info-div">
+            <p>
+              E-mail :
+              <span>
+                <a href="mailto:info@pacht-kiel.de">info@pacht-kiel.de</a></span>
+            </p>
+            <p>
+              Phone :
+              <span>
+                <a href="tel:0431 - 805 81 85">0431 - 805 81 85</a></span>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+          <div class="office-address">
+            <h4 class="footer-link-heading">Head Office</h4>
+            <p>
+              Xilliams Corner Wine © 2017. 1112 A Market St # Ste B22,
+              Charlottesville, CA 45565
+            </p>
+          </div>
+          <div class="office-timing">
+            <h4 class="footer-link-heading">Opening hours</h4>
+            <div class="day">
+              <span>Mon - Fri </span>
+              <span> 9:00 - 18:00</span>
+            </div>
+            <div class="day">
+              <span>Mon - Fri </span>
+              <span> 9:00 - 18:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6 mb-4 mb-sm-0">
+          <h4 class="footer-link-heading">Sitemap</h4>
+          <ul class="pages-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Abouts</a></li>
+            <li><a href="#">imprint</a></li>
+            <li><a href="#">Data protection</a></li>
+            <li><a href="#">Directions</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-4 mb-sm-0">
+          <h4 class="footer-link-heading">Online Shop</h4>
+          <ul class="pages-links">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">registration</a></li>
+            <li><a href="#">Shipping costs</a></li>
+            <li><a href="#">Payment methods</a></li>
+            <li><a href="#">Terms and Conditions Online Shop</a></li>
+            <li><a href="#">Cancellation policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row copyrightrow">
+        <div class="col-md-12 text-center">
+          <p>© 2020 RainstreamTechnologies All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script>
+    // Toggle function to show/hide search bar
+  </script>
+</body>
+
+</html>
